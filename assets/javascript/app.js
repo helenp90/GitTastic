@@ -44,7 +44,7 @@ $(document).ready(function () {
                 }
                 $('anImg').on('click', function () {
 
-                    var state = $(this).attr('data-state');
+                    var state = $(animalImage).attr('data-state');
                     console.log(this);
 
                     if (state == 'still') {
@@ -94,7 +94,7 @@ $(document).ready(function () {
 
                 for (var i = 0; i < results.length; i++) {
 
-                    var amimalDiv = $('<div/>');
+                    var animalDiv = $('<div/>');
 
                     var p = $('<p/>');
 
@@ -121,10 +121,10 @@ $(document).ready(function () {
                 }
                 $('.anImg').on('click', function () {
 
-                    var state = $(this).attr('data-state');
+                    var state = $(animalImage).attr('data-state');
                     console.log(this);
 
-                    if (state == 'still') {
+                    if (state === 'still') {
 
                         $(this).attr('src', $(this).data('animate'));
 
@@ -132,9 +132,9 @@ $(document).ready(function () {
 
                     } else {
 
-                        $(this).attr('src', $(this).data('still'));
+                        $(animalImage).attr('src', $(this).data('still'));
 
-                        $(this).attr('data-state', 'still');
+                        $(animalImage).attr('data-state', 'still');
 
                     }
 
